@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="feed"
+                type="com.nytimes.api.Result"/>
+    </data>
+
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:id="@+id/viewContainer"
+            app:cardCornerRadius="@dimen/dp_4"
+            app:cardElevation="1dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10">
+
+            <ImageView
+                    android:id="@+id/ivFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/dp_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_feed"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{feed.title}"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font16"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:id="@+id/tvAuthor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@{feed.byline}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font12"
+                        android:textStyle="normal"/>
+
+                <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableStart="@drawable/ic_calender_black"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@{feed.publishedDate}"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/font12"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

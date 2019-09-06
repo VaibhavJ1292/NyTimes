@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#45e4d4</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="White">#FFF</color>
+    <color name="black">#000</color>
+    <color name="gray">#aaa</color>
+    <color name="whiteSmoke_75_gradient">#33e1e1e1</color>
+</resources>
